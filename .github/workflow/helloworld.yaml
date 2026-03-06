@@ -4,9 +4,16 @@ name: "Hello world workflow"
 on:
   push:
     branches:
-      - master
+      - main
       - production
 
+
+# jobs 
+# jobs name
+# runs-on what type of enviornment it run
+# steps
+# steps name
+# what run
 
 jobs:
   hello_world:
