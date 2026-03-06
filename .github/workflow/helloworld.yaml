@@ -20,4 +20,4 @@ jobs:
     runs-on: ubuntu-lastest
     steps:
       - name: "Print hello world"
-      - run: ech0 "Hello world"
+      - run: echo "Hello world"
