@@ -1,6 +1,5 @@
-name: "Hello world workflow"
+name: "First CI/CD pipeline written by me"
 
-# events
 on:
   push:
     branches:
@@ -8,16 +7,12 @@ on:
       - production
 
 
-# jobs 
-# jobs name
-# runs-on what type of enviornment it run
-# steps
-# steps name
-# what run
-
 jobs:
-  hello_world:
+  first_ci_cd:
     runs-on: ubuntu-latest
     steps:
-      - name: "Print hello world"
-        run: echo "Hello world"
+      - name: "run code"
+        run: echo "Hello Abhik"
+
+
+
