@@ -1,10 +1,6 @@
 name: "First CI/CD pipeline written by me"
 
-on:
-  push:
-    branches:
-      - main
-      - production
+on: [push]
 
 
 jobs:
@@ -13,6 +9,9 @@ jobs:
     steps:
       - name: "run code"
         run: echo "Hello Abhik"
+
+      - name: "new commit"
+        run: date
 
 
 
