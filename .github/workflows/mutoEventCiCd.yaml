@@ -1,0 +1,31 @@
+name: "Multi Event CI/Cd By Abhik"
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+
+
+
+
+jobs:
+    on_push:
+        if: github.event_name == 'push'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "run code"
+              run: echo "Hello Abhik,push request"
+            - name: "new commit"
+              run: date
+
+
+
+    on_pull_request:
+        if: github.event_name == 'pull_request'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "run code"
+              run: echo "Hello Abhik,Pull request"
+            - name: "new commit"
+              run: date
