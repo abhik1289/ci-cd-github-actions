@@ -1,13 +1,15 @@
-name: "Multi Event CI/Cd By Abhik"
+name: "Multi Event CI/Cd By Abhik" #name  of the pipeline
 
-on:
+on:   #this is event trigger of the pipeline
   push:
     branches: [main]
+  schedule:
+    - cron: "*/5 * * * *" #every day
   pull_request:
     branches: [main]
-    types: [opened, closed]
+    types: [opened, closed] #event_actions
 
-  workflow_dispatch:
+  workflow_dispatch: #this is for manual trigger
 
 jobs:
   on_push:
@@ -47,3 +49,11 @@ jobs:
 
     - name: Show date
       run: date
+  on_schedule:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "run code"
+        run: echo "Hello Abhik,schedule request"
+      - name: "new commit"
+        run: date
