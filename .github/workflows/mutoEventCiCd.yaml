@@ -49,11 +49,11 @@ jobs:
 
     - name: Show date
       run: date
-  on_schedule:
-    if: github.event_name == 'schedule'
-    runs-on: ubuntu-latest
-    steps:
-      - name: "run code"
-        run: echo "Hello Abhik,schedule request"
-      - name: "new commit"
-        run: date
+  # on_schedule:
+  #   if: github.event_name == 'schedule'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: "run code"
+  #       run: echo "Hello Abhik,schedule request"
+  #     - name: "new commit"
+  #       run: date
